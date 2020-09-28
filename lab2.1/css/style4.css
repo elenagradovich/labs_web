@@ -1,0 +1,38 @@
+main {
+  padding: 25px;
+}
+
+
+#code
+{
+background-color:#fffDBD;
+margin:10px;
+padding:5px;
+}
+
+#par1
+{
+visibility:hidden;
+}
+
+.style8
+{
+font-weight:bold;
+font-family:Verdana;
+}
+.style9
+{
+color:red;
+font-size:20px;
+}
+.style10
+{
+color:blue;
+font-family:"Times New Roman";
+}
+.style11
+{
+color:green;
+font-family:Arial;
+font-size:25px;
+}

@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+#accordion1 {
+  margin:8px;
+  width:70%;
+  font-size:0.9em;
+}
+
+#accordion2 {
+  margin:8px;
+  width:80%;
+  font-size:0.9em;
+}
+
+.task4__buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-grow: 1;
+  min-width: 100px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(255,255,255,.2), 0 -1px rgba(0,0,0,.8);
+  outline: none;
+  border: none;
+  border-radius: 100px;
+  background: rgb(28,107,114) radial-gradient(150% 100% at 50% 5px, rgba(255,255,255,.2), rgba(0,0,0,0));
+  box-shadow: inset rgba(0,0,0,.6) 0 -2px 5px, inset rgba(252,255,255,.7) 0 2px 5px, rgba(0,0,0,.8) 0 2px 5px -1px;
+  color: rgb(0,79,86);
+  user-select: none;
+  margin: 10px;
+  padding: 0 5px;
+} 
+
+.button--long {
+  color: rgb(0,79,86);
+  justify-content: space-between;
+  min-width: 400px;
+}
+
+.label:not(:last-of-type) {
+  border-right: 1px solid rgb(0,79,86);
+  padding-right: 5px;
+}
+
+.button:hover,
+.label:hover {
+  color: rgb(0,59,66);
+  cursor: pointer;
+}
+
+.button--long:hover {
+  color: rgb(0,79,86);
+}
+
+
+.button:active,
+.label:active {
+  padding-bottom: 1px;
+  box-shadow:
+   inset rgba(0,0,0,1) 0 1px 3px,
+   inset rgba(0,0,0,.6) 0 -2px 5px,
+   inset rgba(252,255,255,.7) 0 2px 5px,
+   0 1px rgba(255,255,255,.08);
+  color: rgb(128,207,214);
+}
+
+.button--long:active {
+  color: rgb(0,79,86);
+}
+
+  
+
