@@ -4,7 +4,7 @@
    <meta charset="utf-8">
    <link rel="stylesheet" href="../../styles/menu.css">
    <link rel="stylesheet" href="../../styles/commonStyles.css">
-   <script src="../../menu.js"></script>
+   
    <script type='text/javascript'>
       function winter(){
          let xhttp=new XMLHttpRequest();
@@ -26,7 +26,7 @@
          <p>Исправьте ошибки в коде</p>
          <input type='button' value='Отправить запрос' onclick='winter()'/>
          <br /><br />
-         <div id='res'> </div>
+         <div id='res' class="result--border"> </div>
       </main>
    </body>
 </html>

@@ -2,7 +2,7 @@ body {
   background-color: #111;
 }
 
-.menu {
+.main-main-menu {
   padding: 50px;
   height: 100vh;
   width: 100%;
@@ -12,24 +12,24 @@ body {
   border-right: 2px solid gray;
 }
 
-.menu__list {
+.main-menu__list {
   padding: 20px;
   border: 2px solid turquoise;
   border-radius: 10px;
 }
 
-.menu__title {
+.main-menu__title {
   font-size: 35px;
   color: #f1f1f1;
   margin-bottom: 30px;
 }
 
-.menu__item {
+.main-menu__item {
   color: #f1f1f1;
   font-size: 30px;
 }
 
-.menu a {
+.main-menu a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -38,15 +38,15 @@ body {
   transition: 0.3s;
 }
 
-.menu a:hover {
+.main-menu a:hover {
   color: #f1f1f1;
 }
 
 @media screen and (max-height: 450px) {
-  .menu {
+  .main-menu {
     padding-top: 15px;
   }
-  .menu a {
+  .main-menu a {
     font-size: 18px;
   }
 }

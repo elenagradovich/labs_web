@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
   <script type="text/javascript" src="../js/task4.js"></script>
-  <script src="../../menu.js"></script>
+  
   <link rel="stylesheet" href="../css/style4.css">
   <link rel="stylesheet" href="../../styles/menu.css">
   <link rel="stylesheet" href="../../styles/commonStyles.css">                                                      

@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../../styles/menu.css">
     <link rel="stylesheet" href="../../styles/commonStyles.css">
-    <script src="../../menu.js"></script>
+    
   </head>
   <body>
     <?php
@@ -91,12 +91,12 @@
         чтобы при введении пользователем одинаковых чисел, 
         открывалось сообщение "Введенные числа равны!".
       </p>
-      <button onclick="getTask7Result()">Выполнить задание</button>
+      <button class="btn-result" onclick="getTask7Result()">Выполнить задание</button>
 
       <h2>Задание 9.</h2>
       <input class="task9_number" placeholder="Введите число" type="number" />
       <input class="task9_pow" placeholder="Введите степень" type="number" />
-      <button class="task9_button-result">Рассчитать</button>
+      <button class="task9_button-result btn-result">Рассчитать</button>
       <div class="task9_result"></div>
 
 

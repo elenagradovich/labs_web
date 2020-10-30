@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="../../styles/menu.css">
     <link rel="stylesheet" href="../../styles/commonStyles.css">
-    <script src="../../menu.js"></script>
+    
     <script type='text/javascript'>
       window.onload = function (){
         const getData = () => {  

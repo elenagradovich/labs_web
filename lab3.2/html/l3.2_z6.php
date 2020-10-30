@@ -5,9 +5,8 @@
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../../styles/menu.css">
   <link rel="stylesheet" href="../../styles/commonStyles.css">
-  <script src="../../menu.js"></script>
+  
    <script type='text/javascript'>
-    
       function getSeason(season){
         let filePath;
         switch (season) {

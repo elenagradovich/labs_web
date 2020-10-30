@@ -2,7 +2,7 @@
 <head>     
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
   <script type="text/javascript" src="../js/task5.js"></script>
-  <script src="../../menu.js"></script>
+  
   <link rel="stylesheet" href="../css/style5.css">
   <link rel="stylesheet" href="../../styles/menu.css">
   <link rel="stylesheet" href="../../styles/commonStyles.css">                                    

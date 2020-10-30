@@ -9,7 +9,7 @@
     <script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js"></script>
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="../js/task3.js"></script>
-    <script src="../../menu.js"></script>
+    
   </head>
   <body>
     <?php

@@ -11,6 +11,10 @@
   padding-top: 60px;
 }
 
+.sidenav--open {
+  width: 250px;
+}
+
 .sidenav a {
   padding: 10px 10px 10px 35px;
   text-decoration: none;

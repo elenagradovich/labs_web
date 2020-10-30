@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../../styles/menu.css">
     <link rel="stylesheet" href="../../styles/commonStyles.css">
     <script src="../js/jquery.min.js"></script>
-    <script src="../../menu.js"></script>
+    
   </head>
   <body>
     <?php

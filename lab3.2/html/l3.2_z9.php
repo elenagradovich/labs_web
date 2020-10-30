@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="../../styles/menu.css">
   <link rel="stylesheet" href="../../styles/commonStyles.css">
-  <script src="../../menu.js"></script>
+  
 </head>
 
 <body>
@@ -17,6 +17,7 @@
       из текущего каталога и выводит все названия телефонов из него в виде списка.
     </p>
     <button id="button" class="task9__download">Загрузить phonebase.json!</button>
+    
     <script>
       window.onload = function (){
         const downloadButton = document.querySelector('.task9__download');
@@ -32,7 +33,7 @@
             } else {
               const data=JSON.parse(xhr.responseText);
               let elem = document.createElement('ul');
-
+              elem.classList.add('result--border');
               for(item of data) {
                 let li = document.createElement('li');
                 li.textContent = item.name;
@@ -49,6 +50,7 @@
         downloadButton.addEventListener('click', loadPhones);
       }
     </script>
+    
   </main>
 </body>
 
