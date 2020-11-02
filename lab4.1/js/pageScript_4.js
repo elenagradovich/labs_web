@@ -23,15 +23,16 @@ window.onload = function() {
       e.preventDefault();
       if(number1, number2, number3) {
         const xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange=function() {
+        xhttp.onreadystatechange= () => {
           if (xhttp.readyState==4 && xhttp.status==200) {
-            const jsonResponse = JSON.parse(xhttp.responseText);
-            debugger
-            /*result.innerHTML=`Исходный массив: <b>[${jsonResponse.initialArr.join(', ')}]</b>
-            <br>Max значение: <b>${jsonResponse.max}</b>
-            <br>Min значение: <b>${jsonResponse.min}</b>
-            Полученный массив: <b>[${jsonResponse.arr.join(', ')}]</b>`;*/
-            result.innerHTML = xhttp.responseText;
+            const jsonResponse = JSON.parse(xhttp.response);
+            console.log(typeof('sonResponse.arr', jsonResponse.arr));
+            console.log(typeof('initialArr', jsonResponse.initialArr));
+            result.innerHTML=`Исходный массив: [${jsonResponse.initialArr.join(', ')}]
+            <br>Max значение: ${jsonResponse.max}
+            <br>Min значение: ${jsonResponse.min}
+            <br>Массив после преобразования: [${jsonResponse.arr.join(', ')}]
+            `;
           }
         }
         xhttp.open('get', `../php/lab4_4.php?numberValue1=${number1}&numberValue2=${number2}&numberValue3=${number3}`, true);

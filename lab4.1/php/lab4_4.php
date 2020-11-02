@@ -1,7 +1,7 @@
 <?php
-  $minNumber;
-  $maxNumber;
-  $amount = 10;
+  $initialFirstValue=clean($_GET['numberValue1']);
+  $initialLastValue=clean($_GET['numberValue2']);
+  $amount=clean($_GET['numberValue3']);
 
   function clean($value=" ") {
     $value = trim($value);
@@ -9,77 +9,80 @@
     $value = stripslashes($value);
     $value = htmlspecialchars($value);
     return $value;
-  };
-
-  if($_GET['numberValue1']) {
-    $minNumber = clean($_GET['numberValue1']);
-    echo $minNumber;
-  } else {
-    $minNumber = 0;
   }
 
-  if($_GET['numberValue2']) {
-    $maxNumber = clean($_GET['numberValue2']);
-    echo $maxNumber;
-  } else {
-    $maxNumber = 100;
-  }
-  
-  
+  class MinMaxRand {
+    private $initialFirstValue;
+    private $initialLastValue;
+    private $amount;
 
-  /*
-  
+    public $max;
+    public $min;
+    public $arrOfValues = [];
+    public $positionMax;
+    public $positionMin;
+
+    public function __construct(int $max, int $min, int $amount)
+    {
+      $this->initialFirstValue = $max;
+      $this->initialLastValue = $min;
+      $this->amount = $amount;
+    }
+
+    public function createArray()
+    {
+      for ($i=0; $i<($this->amount); $i++) {
+        $newItem = mt_rand($this->initialFirstValue, $this->initialLastValue);
+        if($i==0)
+        {
+          $this->min = $newItem;
+          $this->max = $newItem;
+        }
+        $this->arrOfValues[] = $newItem;
+      }
+    }
+    
+    public function isMin($value, $index) 
+    {
+      if($value <= $this->min)
+      {
+        $this->positionMin = $index;
+        $this->min = $value;
+      }
+    }
+
+    public function isMax($value, $index) 
+    {
+      if($value >= $this->max) {
+        $this->positionMax = $index;
+        $this->max = $value;
+      }
+    }
+
+    public function findMinMax()
+    {
+      for ($i=0; $i<count($this->arrOfValues); $i++)
+      {
+        $item = $this->arrOfValues[$i];
+        $this->isMin($item, $i);
+        $this->isMax($item, $i);
+      }
+    }
+
+    public function replaceMinMax()
+    {
+      $this->arrOfValues[$this->positionMax] = $this->min;
+      $this->arrOfValues[$this->positionMin] = $this->max;
+    }
+  }
   $response = new stdClass(); //пустой класс при передаче пустых типов объектов
-  $response->$initialArr = [];
-  $response->$arr = [];
-  $min;
-  $max;
-  $positionMin;
-  $positionMax;
-  $response->$min='';
-  $response->$max='';
-
-  function checkMin ($item, $position) {
-    global $min;
-    if($item < $min) {
-      $min = $item;
-      $positionMin = $position;
-    };
-  };
-
-  function checkMax ($item, $position) {
-    global $max;
-    if($item > $max) {
-      $max = $item;
-      $positionMax = $position;
-    }
-  };
-
-  function moveElements ($arr) {
-    global $positionMin, $positionMax;
-
-    $arr[$positionMin] = $max;
-    $arr[$positionMax] = $min;
-  };
-  
-  for ($i=0; $i<=$amount; $i++) {
-    global $response;
-    $newItem = mt_rand($minNumber, $maxNumber);
-    if($i==0){
-      global $min;
-      global $max;
-      $min = $newItem;
-      $max = $newItem;
-    }
-    array_push($response->initialArr, $newItem);
-    checkMin($newItem, $i);
-    checkMax($newItem, $i);
-  };
-
-  $response->arr = array_merge(array(), $response->initialArr);
-  moveElements($response->arr);
-  $response->$min=$min;
-  $response->$max=$max;
+  $minMaxRand = new MinMaxRand($initialFirstValue, $initialLastValue, $amount);
+  $minMaxRand->createArray();
+  $response->initialArr = $minMaxRand->arrOfValues;
+  $minMaxRand->findMinMax();
+  $minMaxRand->replaceMinMax();
+  $response->arr = $minMaxRand->arrOfValues;
+  $response->min=$minMaxRand->min;
+  $response->max=$minMaxRand->max;
   echo json_encode($response);
-*/
 ?>

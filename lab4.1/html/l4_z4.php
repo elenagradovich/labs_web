@@ -17,8 +17,8 @@
 местами.
       </p>
       <form action="" method="get">
-        <input type="number" name="numberValue1" id="value1" placeholder="min"/>...
-        <input type="number" name="numberValue2" id="value2" placeholder="max" /><br>
+        <input type="number" name="numberValue1" id="value1" placeholder="min значение диапазона"/>...
+        <input type="number" name="numberValue2" id="value2" placeholder="max значение диапазона" /><br>
         <input type="number" name="numberValue3" id="value3" placeholder="количество чисел" /><br>
         <input type="submit" value="Рассчитать" id="submitInput" />
       </form>
